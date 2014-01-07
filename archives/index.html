@@ -64,6 +64,50 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-01-07T13:25:44.000Z"><a href="/2014/01/07/uniqid()-–-the-easiest-way-to-generate-unique-strings/">1月 7 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/01/07/uniqid()-–-the-easiest-way-to-generate-unique-strings/">Uniqid() – The easiest way to generate unique strings</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>I have seen many PHP developers still use rand() for generating security tokens/unique strings, mostly for generating validation strings such as Email validation etc.</p><br><p>rand() is a secuirty hazard and should never be used to generate a security token. However, there is another function mt<em>rand() which generates better random value.</p><br><p>What if you want to generate a quick and dirty random string for your program? Try uniqid()</p><br><code>&lt;?php<br>echo uniqid();<br>?&gt;<br></code><br><p>The above code will output a string such as “4f3cb635538ed”. If you execute it again, you will get another string. If you want to include a prefix, you can use this.</p><br><code>&lt;?php<br>echo uniqid(“prefix</em>“);<br>?&gt;</code><br><p>which will generate “prefix_4f3cb635538ed” </p><br><p>If you need 32 character string, you can md5 the random value</p><br><code>&lt;?php<br>echo md5(uniqid());<br>?&gt;</code><br><p>Similarly, you can get 40 character using sha1</p><br><code>&lt;?php<br>echo sha1(uniqid());<br>?&gt;</code><br><p>A combination of these all will give you some more powerful unique string. For most security purposes this is a good token</p><br><code>&lt;?php<br>echo md5(uniqid(mt_rand(), true));<br>?&gt;</code><br><p>Returns a string similar to “4ef2854881f4cd9bdd84081477bc3317″ </p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-01-06T18:06:59.000Z"><a href="/2014/01/07/its-2-am,and-ill-go-to-bed-soon/">1月 7 2014</a></time>
       
       
