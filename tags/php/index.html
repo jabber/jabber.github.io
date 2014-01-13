@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | ZHANGJIABO</title>
+  <title>php | ZHANGJIABO</title>
   <meta name="author" content="jabber.zhang">
-  
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation to learn how to use.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hello World"/>
+  
   <meta property="og:site_name" content="ZHANGJIABO"/>
 
   
@@ -55,7 +53,12 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">php</h2>
+
+
+  
+    <article class="post">
   
     <div class="gallery">
   <div class="photoset">
@@ -73,17 +76,17 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2014-01-06T17:30:55.000Z"><a href="/2014/01/07/hello-world/">1月 7 2014</a></time>
+        <time datetime="2014-01-07T13:25:44.000Z"><a href="/2014/01/07/uniqid()-–-the-easiest-way-to-generate-unique-strings/">1月 7 2014</a></time>
       
       
   
-    <h1 class="title">Hello World</h1>
+    <h1 class="title"><a href="/2014/01/07/uniqid()-–-the-easiest-way-to-generate-unique-strings/">Uniqid() – The easiest way to generate unique strings</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+        <p>I have seen many PHP developers still use rand() for generating security tokens/unique strings, mostly for generating validation strings such as Email validation etc.</p><br><p>rand() is a secuirty hazard and should never be used to generate a security token. However, there is another function mt<em>rand() which generates better random value.</p><br><p>What if you want to generate a quick and dirty random string for your program? Try uniqid()</p><br><code>&lt;?php<br>echo uniqid();<br>?&gt;<br></code><br><p>The above code will output a string such as “4f3cb635538ed”. If you execute it again, you will get another string. If you want to include a prefix, you can use this.</p><br><code>&lt;?php<br>echo uniqid(“prefix</em>“);<br>?&gt;</code><br><p>which will generate “prefix_4f3cb635538ed” </p><br><p>If you need 32 character string, you can md5 the random value</p><br><code>&lt;?php<br>echo md5(uniqid());<br>?&gt;</code><br><p>Similarly, you can get 40 character using sha1</p><br><code>&lt;?php<br>echo sha1(uniqid());<br>?&gt;</code><br><p>A combination of these all will give you some more powerful unique string. For most security purposes this is a good token</p><br><code>&lt;?php<br>echo md5(uniqid(mt_rand(), true));<br>?&gt;</code><br><p>Returns a string similar to “4ef2854881f4cd9bdd84081477bc3317″ </p>
 
       
     </div>
@@ -91,16 +94,6 @@
       
         
         
-        
-  <div class="addthis addthis_toolbox addthis_default_style">
-    
-    
-    
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
       
       <div class="clearfix"></div>
     </footer>
@@ -108,43 +101,14 @@
 </article>
 
 
-  
-<!--section id="comment">
-  <h1 class="title">留言</h1>
 
   
-      <div id="fb-root"></div>
-<script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 
-<div class="fb-comments" data-href="http://zhangjiabo.com/2014/01/07/hello-world/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
-      
+  <nav id="pagination">
   
-</section-->
-
-<!-- Duoshuo Comment BEGIN -->
-	<div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"zhangjiabo"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = 'http://static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		|| document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- Duoshuo Comment END -->
-
-
+  
+  <div class="clearfix"></div>
+</nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
@@ -155,8 +119,28 @@ var duoshuoQuery = {short_name:"zhangjiabo"};
 </div>
 
   
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/lyrics/">lyrics</a><small>1</small></li>
+  
+    <li><a href="/categories/php/">php</a><small>1</small></li>
+  
+    <li><a href="/categories/日记/">日记</a><small>1</small></li>
+  
+  </ul>
+</div>
+
 
   
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/lyrics/" style="font-size: NaNpx;">lyrics</a><a href="/tags/php/" style="font-size: NaNpx;">php</a><a href="/tags/uid/" style="font-size: NaNpx;">uid</a><a href="/tags/日记/" style="font-size: NaNpx;">日记</a>
+  </div>
+</div>
+
 </aside>
     <div class="clearfix"></div>
   </div>
